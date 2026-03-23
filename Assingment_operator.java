@@ -1,0 +1,14 @@
+class  Assingment_operator
+{
+	public static void main(String[] args) 
+	{
+		double a = 5;
+		a+=3;
+		a-=2;
+		a*=3;
+		a/=2;
+		a%=3;
+
+		System.out.println(a);
+	}
+}

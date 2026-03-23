@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Love Animation</title>
+
+<style>
+body{
+  background:#111;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* ==== YOUR CSS APPLIED CORRECTLY ==== */
+
+#ui .love_word {
+  color: #ea80b0;
+  font-size: 1.4rem;
+  transform: translateY(-100%) rotateZ(-30deg);
+  text-shadow: 0 0 10px #fff;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+#ui .love_horizontal {
+  display: flex;
+  gap: 20px;
+  animation: horizontal 10000ms infinite alternate ease-in-out;
+}
+
+#ui .love_word {
+  animation: float 2s infinite ease-in-out;
+  animation-delay: calc(var(--i) * -300ms);
+}
+
+@keyframes horizontal {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(200px); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(-100%) rotateZ(-30deg); }
+  50%    { transform: translateY(-120%) rotateZ(-30deg); }
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="ui">
+  <div class="love_horizontal">
+    <span class="love_word" style="--i:1">I</span>
+    <span class="love_word" style="--i:2">LOVE</span>
+    <span class="love_word" style="--i:3">YOU</span>
+    <span class="love_word" style="--i:4">❤️</span>
+  </div>
+</div>
+
+</body>
+</html>
